@@ -23,10 +23,9 @@ import lombok.Setter;
 
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
-public class ArmorStandManipulatedEvent extends ArmorStandEvent implements Cancellable {
+public class ArmorStandManipulatedEvent extends CancellableArmorStandEvent {
 
     @Getter
     @Setter

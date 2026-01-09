@@ -184,13 +184,6 @@
             <version>0.102.0.1</version>
             <scope>provided</scope>
         </dependency>
-        <!--- UpdateChecker -->
-        <dependency>
-            <groupId>com.jeff_media</groupId>
-            <artifactId>SpigotUpdateChecker</artifactId>
-            <version>3.0.4</version>
-            <scope>compile</scope>
-        </dependency>
         <!-- SuperiorSkyblock API -->
         <dependency>
             <groupId>com.bgsoftware</groupId>
@@ -310,10 +303,6 @@
                         <configuration>
                             <relocations>
                                 <relocation>
-                                    <pattern>com.jeff_media.updatechecker</pattern>
-                                    <shadedPattern>io.github.rypofalem.armorstandeditor.updatechecker</shadedPattern>
-                                </relocation>
-                                <relocation>
                                     <pattern>io.papermc.lib</pattern>
                                     <shadedPattern>io.github.rypofalem.armorstandeditor.libs.paperlib</shadedPattern>
                                 </relocation>
@@ -331,16 +320,6 @@
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
-            <!-- Hangar Publish Support -->
-            <plugin>
-                <groupId>io.papermc.hangar</groupId>
-                <artifactId>hangar-publish-plugin</artifactId>
-                <version>1.0.0</version> <!-- replace with latest -->
-                <configuration>
-                    <apiToken>${hangar.token}</apiToken>
-                    <projectId>YourProjectID</projectId>
-                </configuration>
-           </plugin>
         </plugins>
     </build>
 </project>

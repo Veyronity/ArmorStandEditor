@@ -5,10 +5,9 @@ import lombok.Setter;
 
 import org.bukkit.entity.ItemFrame;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
-public class ItemFrameGlowEvent extends ItemFrameEvent implements Cancellable {
+public class ItemFrameGlowEvent extends CancellableItemFrameEvent {
     @Getter
     @Setter
     private boolean cancelled = false;

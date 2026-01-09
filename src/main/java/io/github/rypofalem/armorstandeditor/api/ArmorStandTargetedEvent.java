@@ -24,10 +24,9 @@ import lombok.Setter;
 
 import org.bukkit.entity.ArmorStand;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Cancellable;
 import org.bukkit.event.HandlerList;
 
-public class ArmorStandTargetedEvent extends ArmorStandEvent implements Cancellable {
+public class ArmorStandTargetedEvent extends CancellableArmorStandEvent {
     @Getter
     @Setter
     private boolean cancelled = false;
