@@ -92,17 +92,18 @@ public class TownyProtection implements Protection {
         BoundingBox bbox = BoundingBox.of(asLoc, 1, 1, 1).shift(0, 1, 0);
 
         for (Entity entity : asLoc.getWorld().getNearbyEntities(bbox)){
-            if(entity instanceof ArmorStand stand){
+            if (entity instanceof ArmorStand stand) {
                 Location entityLoc = stand.getLocation();
                 debug.log("ArmorStand Found at X: " + entityLoc.getBlockX() + ", Y: " + entityLoc.getBlockY() + ", Z: " + entityLoc.getBlockZ());
-                if(entityLoc.getBlockX() == asLoc.getBlockX()
+                if (entityLoc.getBlockX() == asLoc.getBlockX()
                         && entityLoc.getBlockZ() == asLoc.getBlockZ()
-                        && entityLoc.getBlockY() == asLoc.getBlockY() + 1){
+                        && entityLoc.getBlockY() == asLoc.getBlockY()
+                ) {
                     return stand;
                 }
             }
         }
-        debug.log("Entity found at X: " + asLoc.getBlockX() + ", Y: " + asLoc.getBlockY()+1 + ", Z: " + asLoc.getBlockZ() +" is not an ArmorStand. So we will return NULL - Will do so for ItemFrames etc.");
+        debug.log("Entity found at X: " + asLoc.getBlockX() + ", Y: " + asLoc.getBlockY() + ", Z: " + asLoc.getBlockZ() +" is not an ArmorStand. So we will return NULL - Will do so for ItemFrames etc.");
         return null;
     }
 }
